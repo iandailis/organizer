@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+    font-family: Georgia;
+    overflow-x: hidden;
+}
+h3 {
+    margin-top: 5%; 
+}
+.container-fluid {
+    max-width: 90vw;
+    text-align: center;
+}
+#header {
+    background-color: white;
+    padding-top: 1.5vh;
+    min-height: 7vh;
+}
+#schedule {
+    width: 100%;
+    height: 50vh;
+}
+#classes {
+    min-height: 41vh;
+
+}
+.text {
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+.btn {
+    border-color:gray !important;
+    background-color: lightgray !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: black !important;
+    margin: 2px !important;
+    padding: 5px !important;
+}
+.btn:hover {
+    background-color: gray !important;
+    color: white !important;
+}
+.btn:active, .btn:target {
+    color: gray !important;
+}
+.btn:focus {
+    box-shadow: none !important;
+}
+@media (max-width: 930px) {
+    .col {
+        min-width: 33vw !important;
+    }
+    .container-fluid {
+        min-width: 100vw !important;
+    }
+}
+@media (max-width: 530px) {
+    .col {
+        min-width: 100vw !important;
+    }
+}
