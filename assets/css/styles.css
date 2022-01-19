@@ -1,61 +1,67 @@
 body {
-    background-color: black;
-    font-family: Georgia;
-    overflow-x: hidden;
+	background-color: black;
+	font-family: Georgia;
+	overflow-x: hidden;
 }
 h3 {
-    margin-top: 5%; 
+	margin-top: 5%; 
 }
 .container-fluid {
-    max-width: 90vw;
-    text-align: center;
+	max-width: 90vw;
+	text-align: center;
 }
 #header {
-    background-color: white;
-    padding-top: 1vh;
-    min-height: 6vh;
+	background-color: white;
+	padding-top: 1vh;
+	min-height: 6vh;
 }
 #schedule {
-    width: 100%;
-    min-height: 75vh;
+	width: 100%;
+	min-height: 75vh;
 }
 #classes {
-    min-height: 30vh;
+	min-height: 30vh;
 
 }
 .text {
-    padding-bottom: 5px;
-    margin-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
 }
 .btn {
-    border-color:gray !important;
-    background-color: lightgray !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    color: black !important;
-    margin: 2px !important;
-    padding: 5px !important;
+	border-color:gray !important;
+	background-color: lightgray !important;
+	font-size: 16px !important;
+	font-weight: bold !important;
+	color: black !important;
+	margin: 2px !important;
+	padding: 5px !important;
 }
 .btn:hover {
-    background-color: gray !important;
-    color: white !important;
+	background-color: gray !important;
+	color: white !important;
 }
 .btn:active, .btn:target {
-    color: gray !important;
+	color: gray !important;
 }
 .btn:focus {
-    box-shadow: none !important;
+	box-shadow: none !important;
 }
 @media (max-width: 930px) {
-    .col {
-        min-width: 33vw !important;
-    }
-    .container-fluid {
-        min-width: 100vw !important;
-    }
+	.col {
+		min-width: 33vw !important;
+	}
+	.container-fluid {
+		min-width: 100vw !important;
+	}
 }
 @media (max-width: 530px) {
-    .col {
-        min-width: 100vw !important;
-    }
+	.col {
+		min-width: 100vw !important;
+	}
+	.col-4 {
+		min-width: 100vw !important;
+	}
+	.col-8 {
+		min-width: 100vw !important;
+	}
 }
