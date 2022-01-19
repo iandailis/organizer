@@ -9,7 +9,7 @@ function main() {
     var xUnit;
     var yUnit;
 
-    var numTimes = 7;
+    var numTimes = 9;
 
     var widthThreshold = 700;
     var spacer = 5;
@@ -80,7 +80,7 @@ function main() {
             xOffset = 24 + spacer
         }
     }
-    function drawBlock(block) { // draws the given block in the schedule
+    function drawBlock(block, text) { // draws the given block in the schedule
 
         if (block[0] == "Mon") {
             block[0] = 0;
@@ -104,23 +104,57 @@ function main() {
         else {
             block[1] += 2;
         }
-        ctx.fillRect(xOffset + xUnit* block[0], yOffset + yUnit* block[1], xUnit, yUnit* block[2]); 
+        ctx.fillRect(xOffset + xUnit * block[0], yOffset + yUnit * block[1], xUnit, yUnit * block[2]); 
+        if (canv.width < widthThreshold) {
+            return;
+        }
+        ctx.font = "20px Georgia";
+        ctx.fillStyle = "black"
+        ctx.textAlign = "center";
+        ctx.fillText(text, xOffset + xUnit * (block[0] + 0.5), yOffset + yUnit * (block[1] + 0.6));
     }
 
     function drawSchedule() {   // draws the schedule
-        math285 = ["#ff4444", ["Mon", 10, 1], ["Wed", 10, 1], ["Fri", 10, 1]];
-        ece210 = ["#44ff44", ["Mon", 11, 1], ["Tue", 11, 1], ["Wed", 11, 1], ["Fri", 11, 1], ["Mon", 12, 2]];
-        ece210Lab = ["#44cc44", ["Mon", 12, 2]];
-        ece385 = ["#44ffff", ["Mon", 4, 1], ["Wed", 4, 1]];
-        cs225 = ["#ffff44", ["Mon", 2, 1], ["Wed", 2, 1], ["Fri", 2, 1]];
-        cs225Lab = ["#dddd44", ["Thu", 11, 2]]; 
+        math257_lec = ["MATH 257", "#ff4444", ["Mon", 11, 1], ["Wed", 11, 1]];
+        math257_lab = ["MATH 257", "#cc1111", ["Fri", 11, 1]];
+        math257_dis = ["MATH 257", "#ff7777", ["Tue", 10, 1]];
+
+        phys21x_lec = ["PHYS 213/214", "#44ff44", ["Mon", 10, 1], ["Wed", 10, 1]];
+        phys214_lec = ["PHYS 214", "#44ff44", ["Fri", 10, 1]];
+        phys21x_lab = ["PHYS 213/214", "#11cc11", ["Mon", 12, 2]];
+        phys21x_dis = ["PHYS 213/214", "#77ff77", ["Wed", 12, 2]];
+
+        ece391_lec = ["ECE 391", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
+        ece391_dis = ["ECE 391", "#ff88ff", ["Wed", 2, 1]];
+
+        ece310_lec = ["ECE 310", "#ffff44", ["Mon", 3, 1], ["Wed", 3, 1], ["Fri", 3, 1]];
+        ece310_lab = ["ECE 311", "#cccc11", ["Tue", 11, 2]];
+
+        seminar = ["SEMINAR", "#44ffff", ["Wed", 5, 2]];
         
-        courses = [math285, ece210, ece210Lab, ece385, cs225, cs225Lab];
+        courses = [
+            math257_lec, 
+            math257_lab, 
+            math257_dis,
+
+            phys21x_lec,
+            phys214_lec, 
+            phys21x_lab, 
+            phys21x_dis, 
+            
+            ece391_lec, 
+            ece391_dis, 
+            
+            ece310_lec, 
+            ece310_lab,
+        
+            seminar
+        ];
 
         for (i=0; i < courses.length; i++) {
-            ctx.fillStyle = courses[i][0];
-            for (j=1; j < courses[i].length; j++) {
-                drawBlock(courses[i][j]);
+            for (j=2; j < courses[i].length; j++) {
+                ctx.fillStyle = courses[i][1];
+                drawBlock(courses[i][j], courses[i][0]);
             }
         }
     }
