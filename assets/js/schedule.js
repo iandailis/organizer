@@ -119,10 +119,9 @@ function main() {
 		math257_lab = ["MATH 257", "#cc1111", ["Fri", 11, 1]];
 		math257_dis = ["MATH 257", "#ff8888", ["Tue", 10, 1]];
 
-		phys21x_lec = ["PHYS 213/214", "#44ff44", ["Mon", 10, 1], ["Wed", 10, 1]];
-		phys214_lec = ["PHYS 214", "#44ff44", ["Fri", 10, 1]];
-		phys21x_lab = ["PHYS 213/214", "#11cc11", ["Mon", 12, 2]];
-		phys21x_dis = ["PHYS 213/214", "#88ff88", ["Wed", 12, 2]];
+		phys21x_lec = ["PHYS 213", "#44ff44", ["Mon", 10, 1], ["Wed", 10, 1]];
+		phys21x_lab = ["PHYS 213", "#11cc11", ["Mon", 12, 2]];
+		phys21x_dis = ["PHYS 213", "#88ff88", ["Wed", 12, 2]];
 
 		ece391_lec = ["ECE 391", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
 		ece391_dis = ["ECE 391", "#ff88ff", ["Wed", 2, 1]];
@@ -138,7 +137,6 @@ function main() {
 			math257_dis,
 
 			phys21x_lec,
-			phys214_lec, 
 			phys21x_lab, 
 			phys21x_dis, 
 			
