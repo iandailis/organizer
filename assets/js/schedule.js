@@ -9,7 +9,7 @@ function main() {
 	var xUnit;
 	var yUnit;
 
-	var numTimes = 9;
+	var numTimes = 6;
 
 	var widthThreshold = 700;
 	var spacer = 5;
@@ -115,39 +115,45 @@ function main() {
 	}
 
 	function drawSchedule() {   // draws the schedule
-		math257_lec = ["MATH 257", "#ff4444", ["Mon", 11, 1], ["Wed", 11, 1]];
-		math257_lab = ["MATH 257", "#cc1111", ["Fri", 11, 1]];
-		math257_dis = ["MATH 257", "#ff8888", ["Tue", 10, 1]];
 
-		phys21x_lec = ["PHYS 213", "#44ff44", ["Mon", 10, 1], ["Wed", 10, 1]];
-		phys21x_lab = ["PHYS 213", "#11cc11", ["Mon", 12, 2]];
-		phys21x_dis = ["PHYS 213", "#88ff88", ["Wed", 12, 2]];
+		ece411 = ["ECE 411", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
 
-		ece391_lec = ["ECE 391", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
-		ece391_dis = ["ECE 391", "#ff88ff", ["Wed", 2, 1]];
+		ece462_lec = ["ECE 462", "#ff4444", ["Mon", 10, 1], ["Wed", 10, 1]];
+		ece462_dis = ["ECE 462", "#ff8888", ["Fri", 10, 1]];
 
-		ece310_lec = ["ECE 310", "#ffff44", ["Mon", 3, 1], ["Wed", 3, 1], ["Fri", 3, 1]];
-		ece310_lab = ["ECE 311", "#cccc11", ["Tue", 11, 2]];
-
-		seminar = ["SEMINAR", "#44ffff", ["Wed", 5, 2]];
+		ece342 = ["ECE 342", "#ffff44", ["Mon", 11, 1], ["Wed", 11, 1], ["Fri", 11, 1]];
 		
+		ece340 = ["ECE 340", "#44ff44", ["Mon", 12, 1], ["Wed", 12, 1], ["Fri", 12, 1]];
+
+		ece343 = ["ECE 343", "#cccc11", ["Tue", 11, 3]];
+
+		kin103 = ["KIN 103", "#44ffff", ["Mon", 2, 1], ["Wed", 2, 1]];
+
 		courses = [
-			math257_lec, 
-			math257_lab, 
-			math257_dis,
-
-			phys21x_lec,
-			phys21x_lab, 
-			phys21x_dis, 
-			
-			ece391_lec, 
-			ece391_dis, 
-			
-			ece310_lec, 
-			ece310_lab,
-		
-			seminar
+			ece411,
+			ece462_lec, 
+			ece462_dis,
+			ece342,
+			ece340,
+			ece343,
+			kin103
 		];
+
+		// math257_lec = ["MATH 257", "#ff4444", ["Mon", 11, 1], ["Wed", 11, 1]];
+		// math257_lab = ["MATH 257", "#cc1111", ["Fri", 11, 1]];
+		// math257_dis = ["MATH 257", "#ff8888", ["Tue", 10, 1]];
+
+		// phys21x_lec = ["PHYS 213", "#44ff44", ["Mon", 10, 1], ["Wed", 10, 1]];
+		// phys21x_lab = ["PHYS 213", "#11cc11", ["Mon", 12, 2]];
+		// phys21x_dis = ["PHYS 213", "#88ff88", ["Wed", 12, 2]];
+
+		// ece391_lec = ["ECE 391", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
+		// ece391_dis = ["ECE 391", "#ff88ff", ["Wed", 2, 1]];
+
+		// ece310_lec = ["ECE 310", "#ffff44", ["Mon", 3, 1], ["Wed", 3, 1], ["Fri", 3, 1]];
+		// ece310_lab = ["ECE 311", "#cccc11", ["Tue", 11, 2]];
+
+		// seminar = ["SEMINAR", "#44ffff", ["Wed", 5, 2]];
 
 		for (i=0; i < courses.length; i++) {
 			for (j=2; j < courses[i].length; j++) {
