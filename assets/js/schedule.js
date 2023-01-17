@@ -9,7 +9,7 @@ function main() {
 	var xUnit;
 	var yUnit;
 
-	var numTimes = 6;
+	var numTimes = 8;
 
 	var widthThreshold = 700;
 	var spacer = 5;
@@ -111,49 +111,39 @@ function main() {
 		ctx.font = "20px Georgia";
 		ctx.fillStyle = "black"
 		ctx.textAlign = "center";
-		ctx.fillText(text, xOffset + xUnit * (block[0] + 0.5), yOffset + yUnit * (block[1] + 0.6));
+		if (block[1] % 1 == 0) {
+			ctx.fillText(text, xOffset + xUnit * (block[0] + 0.5), yOffset + yUnit * (block[1] + 0.6));
+		} else {
+			ctx.fillText(text, xOffset + xUnit * (block[0] + 0.5), yOffset + yUnit * (block[1] + 1.1));
+		}
 	}
 
 	function drawSchedule() {   // draws the schedule
 
-		ece411 = ["ECE 411", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
+		ece498 = ["ECE 498 SJP", "#ff44ff", ["Tue", 12.5, 1.5], ["Thu", 12.5, 1.5]];
 
-		ece462_lec = ["ECE 462", "#ff4444", ["Mon", 10, 1], ["Wed", 10, 1]];
-		ece462_dis = ["ECE 462", "#ff8888", ["Fri", 10, 1]];
+		econ102_lec = ["ECON 102", "#ff4444", ["Mon", 1, 1], ["Wed", 1, 1]];
+		econ102_dis = ["ECON 102", "#ff7777", ["Fri", 1, 1]];
 
-		ece342 = ["ECE 342", "#ffff44", ["Mon", 11, 1], ["Wed", 11, 1], ["Fri", 11, 1]];
+		ece444_lec = ["ECE 444", "#ffff44", ["Mon", 10, 1], ["Wed", 10, 1], ["Fri", 10, 1]];
+		ece444_lab = ["ECE 444", "#cccc44", ["Thu", 2, 3]];
 		
-		ece340 = ["ECE 340", "#44ff44", ["Mon", 12, 1], ["Wed", 12, 1], ["Fri", 12, 1]];
+		ece425 = ["ECE 425", "#44ff44", ["Mon", 11, 1], ["Wed", 11, 1], ["Fri", 11, 1]];
 
-		ece343 = ["ECE 343", "#cccc11", ["Tue", 11, 3]];
+		ansc210 = ["ANSC 210", "#4444ff", ["Wed", 3, 3]];
 
-		kin103 = ["KIN 103", "#44ffff", ["Mon", 2, 1], ["Wed", 2, 1]];
+		kin104 = ["KIN 104", "#44ffff", ["Mon", 2, 1], ["Wed", 2, 1], ["Fri", 2, 1]];
 
 		courses = [
-			ece411,
-			ece462_lec, 
-			ece462_dis,
-			ece342,
-			ece340,
-			ece343,
-			kin103
+			ece498,
+			econ102_lec, 
+			econ102_dis,
+			ece444_lec,
+			ece444_lab,
+			ece425,
+			ansc210,
+			kin104
 		];
-
-		// math257_lec = ["MATH 257", "#ff4444", ["Mon", 11, 1], ["Wed", 11, 1]];
-		// math257_lab = ["MATH 257", "#cc1111", ["Fri", 11, 1]];
-		// math257_dis = ["MATH 257", "#ff8888", ["Tue", 10, 1]];
-
-		// phys21x_lec = ["PHYS 213", "#44ff44", ["Mon", 10, 1], ["Wed", 10, 1]];
-		// phys21x_lab = ["PHYS 213", "#11cc11", ["Mon", 12, 2]];
-		// phys21x_dis = ["PHYS 213", "#88ff88", ["Wed", 12, 2]];
-
-		// ece391_lec = ["ECE 391", "#ff44ff", ["Tue", 2, 1.5], ["Thu", 2, 1.5]];
-		// ece391_dis = ["ECE 391", "#ff88ff", ["Wed", 2, 1]];
-
-		// ece310_lec = ["ECE 310", "#ffff44", ["Mon", 3, 1], ["Wed", 3, 1], ["Fri", 3, 1]];
-		// ece310_lab = ["ECE 311", "#cccc11", ["Tue", 11, 2]];
-
-		// seminar = ["SEMINAR", "#44ffff", ["Wed", 5, 2]];
 
 		for (i=0; i < courses.length; i++) {
 			for (j=2; j < courses[i].length; j++) {
