@@ -4,7 +4,7 @@ body {
 	overflow-x: hidden;
 }
 h3 {
-	margin-top: 5%; 
+	margin-top: 3%; 
 }
 .container-fluid {
 	max-width: 90vw;
@@ -17,15 +17,11 @@ h3 {
 }
 #schedule {
 	width: 100%;
-	min-height: 60vh;
-}
-#classes {
-	min-height: 30vh;
-
+	min-height: 65vh;
 }
 .text {
-	padding-bottom: 5px;
-	margin-top: 5px;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
 .btn {
 	border-color:gray !important;
@@ -33,7 +29,7 @@ h3 {
 	font-size: 16px !important;
 	font-weight: bold !important;
 	color: black !important;
-	margin: 2px !important;
+	margin: 1px !important;
 	padding: 5px !important;
 }
 .btn:hover {
