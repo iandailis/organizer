@@ -9,7 +9,7 @@ function main() {
 	var xUnit;
 	var yUnit;
 
-	var numTimes = 7;
+	var numTimes = 8;
 
 	var widthThreshold = 700;
 	var spacer = 5;
@@ -130,9 +130,9 @@ function main() {
 		
 		ece425 = ["ECE 425", "#44ff44", ["Mon", 11, 1], ["Wed", 11, 1], ["Fri", 11, 1]];
 
-		// ansc210 = ["ANSC 210", "#4444ff", ["Wed", 3, 3]];
+		ansc210 = ["ANSC 210", "#4444ff", ["Wed", 3, 3]];
 
-		kin104 = ["KIN 104", "#44ffff", ["Mon", 2, 1], ["Wed", 2, 1], ["Fri", 2, 1]];
+		// kin104 = ["KIN 104", "#44ffff", ["Mon", 2, 1], ["Wed", 2, 1], ["Fri", 2, 1]];
 
 		courses = [
 			ece498,
@@ -141,8 +141,8 @@ function main() {
 			ece444_lec,
 			ece444_lab,
 			ece425,
-			// ansc210,
-			kin104
+			ansc210,
+			// kin104
 		];
 
 		for (i=0; i < courses.length; i++) {
