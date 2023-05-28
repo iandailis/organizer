@@ -68,7 +68,7 @@ function main() {
 	}
 
 	function timeSelector(i) {  // writes the time with resizing
-		time = i + 10
+		time = i + 11
 		if (time > 12) {
 			time -= 12;
 		}
@@ -98,11 +98,11 @@ function main() {
 			block[0] = 4;
 		}
 
-		if (block[1] >= 10) {
-			block[1] -= 10;
+		if (block[1] >= 11) {
+			block[1] -= 11;
 		}
 		else {
-			block[1] += 2;
+			block[1] += 1;
 		}
 		ctx.fillRect(xOffset + xUnit * block[0], yOffset + yUnit * block[1], xUnit, yUnit * block[2]); 
 		if (canv.width < widthThreshold) {
@@ -120,29 +120,24 @@ function main() {
 
 	function drawSchedule() {   // draws the schedule
 
-		ece498 = ["ECE 498 SJP", "#ff44ff", ["Tue", 12.5, 1.5], ["Thu", 12.5, 1.5]];
+		ece498 = ["ECE 498 HK", "#ff44ff", ["Thu", 11, 1]];
 
-		econ102_lec = ["ECON 102", "#ff4444", ["Mon", 1, 1], ["Wed", 1, 1]];
-		econ102_dis = ["ECON 102", "#ff7777", ["Fri", 1, 1]];
+		fshn343 = ["FSHN 343", "#ff4444", ["Tue", 3.5, 2], ["Thu", 3.5, 2]];
 
-		ece444_lec = ["ECE 444", "#ffff44", ["Mon", 10, 1], ["Wed", 10, 1], ["Fri", 10, 1]];
-		ece444_lab = ["ECE 444", "#cccc44", ["Thu", 2, 3]];
+		ece374_lec = ["ECE 374", "#ffff44", ["Tue", 12.5, 1.5], ["Thu", 12.5, 1.5]];
+		ece374_dis = ["ECE 374", "#ffff77", ["Wed", 2, 1], ["Fri", 2, 1]];
 		
-		ece425 = ["ECE 425", "#44ff44", ["Mon", 11, 1], ["Wed", 11, 1], ["Fri", 11, 1]];
+		ece512 = ["ECE 512", "#44ff44", ["Mon", 3, 1.5], ["Wed", 3, 1.5]];
 
-		ansc210 = ["ANSC 210", "#4444ff", ["Wed", 3, 3]];
-
-		// kin104 = ["KIN 104", "#44ffff", ["Mon", 2, 1], ["Wed", 2, 1], ["Fri", 2, 1]];
+		ece200 = ["ECE 200", "#4444ff", ["Wed", 5, 2]];
 
 		courses = [
 			ece498,
-			econ102_lec, 
-			econ102_dis,
-			ece444_lec,
-			ece444_lab,
-			ece425,
-			ansc210,
-			// kin104
+			fshn343, 
+			ece374_lec,
+			ece374_dis,
+			ece512,
+			ece200
 		];
 
 		for (i=0; i < courses.length; i++) {
