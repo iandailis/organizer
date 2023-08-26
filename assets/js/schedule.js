@@ -9,7 +9,7 @@ function main() {
 	var xUnit;
 	var yUnit;
 
-	var numTimes = 8;
+	var numTimes = 7;
 
 	var widthThreshold = 700;
 	var spacer = 5;
@@ -122,22 +122,19 @@ function main() {
 
 		ece498 = ["ECE 498 HK", "#ff44ff", ["Thu", 11, 1]];
 
-		fshn343 = ["FSHN 343", "#ff4444", ["Tue", 3.5, 2], ["Thu", 3.5, 2]];
+		fshn343 = ["FSHN 343", "#ff4444", ["Tue", 3.5, 1.7], ["Thu", 3.5, 1.7]];
 
 		ece374_lec = ["ECE 374", "#ffff44", ["Tue", 12.5, 1.5], ["Thu", 12.5, 1.5]];
 		ece374_dis = ["ECE 374", "#ffff77", ["Wed", 2, 1], ["Fri", 2, 1]];
 		
 		ece512 = ["ECE 512", "#44ff44", ["Mon", 3, 1.5], ["Wed", 3, 1.5]];
 
-		ece200 = ["ECE 200", "#4444ff", ["Wed", 5, 2]];
-
 		courses = [
 			ece498,
 			fshn343, 
 			ece374_lec,
 			ece374_dis,
-			ece512,
-			ece200
+			ece512
 		];
 
 		for (i=0; i < courses.length; i++) {
