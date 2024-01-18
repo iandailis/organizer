@@ -9,7 +9,7 @@ function main() {
 	var xUnit;
 	var yUnit;
 
-	var numTimes = 7;
+	var numTimes = 4;
 
 	var widthThreshold = 700;
 	var spacer = 5;
@@ -68,7 +68,7 @@ function main() {
 	}
 
 	function timeSelector(i) {  // writes the time with resizing
-		time = i + 11
+		time = i + 10
 		if (time > 12) {
 			time -= 12;
 		}
@@ -98,8 +98,8 @@ function main() {
 			block[0] = 4;
 		}
 
-		if (block[1] >= 11) {
-			block[1] -= 11;
+		if (block[1] >= 10) {
+			block[1] -= 10;
 		}
 		else {
 			block[1] += 1;
@@ -120,21 +120,16 @@ function main() {
 
 	function drawSchedule() {   // draws the schedule
 
-		ece498 = ["ECE 498 HK", "#ff44ff", ["Thu", 11, 1]];
+		ece313 = ["ECE 313", "#ff44ff", ["Mon", 10, 1], ["Wed", 10, 1], ["Fri", 10, 1]];
 
-		fshn343 = ["FSHN 343", "#ff4444", ["Tue", 3.5, 1.7], ["Thu", 3.5, 1.7]];
-
-		ece374_lec = ["ECE 374", "#ffff44", ["Tue", 12.5, 1.5], ["Thu", 12.5, 1.5]];
-		ece374_dis = ["ECE 374", "#ffff77", ["Wed", 2, 1], ["Fri", 2, 1]];
+		hort105_lec = ["HORT 105", "#ff4444", ["Mon", 11, 1], ["Wed", 11, 1]];
+		hort105_dis = ["HORT 105", "#ff7777", ["Fri", 12, 2]];
 		
-		ece512 = ["ECE 512", "#44ff44", ["Mon", 3, 1.5], ["Wed", 3, 1.5]];
 
 		courses = [
-			ece498,
-			fshn343, 
-			ece374_lec,
-			ece374_dis,
-			ece512
+			ece313,
+			hort105_lec,
+			hort105_dis
 		];
 
 		for (i=0; i < courses.length; i++) {
